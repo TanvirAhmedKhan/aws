@@ -91,12 +91,12 @@
                      String name = new File(item.getName()).getName();
                      item.write( new File("c:\\receivedPhoto" + File.separator + name));
                      AWSCredentials credentials = new BasicAWSCredentials(
-							 "AKIAI26XHZ7D27EOM5BQ",
-							"6ydv0s5De4vAlWEVZNsurlUhq7wnfK7DXup0pR9m");
+							 "AKIAIxxxxxxxxxxxx",
+							"6ydv0sxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 					
 					 AmazonS3 s3client = new AmazonS3Client(credentials);
 					
-					 String bucket = "tanvirahmedkhan";
+					 String bucket = "yourBucketName";
 					 String fileName = name;
 					 path = name;
 					 String saveFile= "C:/receivedPhoto/"+name; 
@@ -107,10 +107,10 @@
 				 
 		 	
 		 	try{	
-		 	   String url = "jdbc:mysql://tanvirdb1.ckjlrrjsd2wg.ap-southeast-2.rds.amazonaws.com:3306/";
-		 	   String userName = "tanvirdb1";
-		 	   String password = "tanvirdb1";
-		 	   String dbName = "tanvirdb1";
+		 	   String url = "jdbc:mysql://your_Amazon_RDS_with_port_number";
+		 	   String userName = "username";
+		 	   String password = "password";
+		 	   String dbName = "dbname";
 		 	  // String driver = "com.mysql.jdbc.Driver";
 		 	  Class.forName("com.mysql.jdbc.Driver").newInstance();
 		 	    

@@ -56,19 +56,19 @@ data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 
 <%
 try{	
-	   String url = "jdbc:mysql://tanvirdb1.ckjlrrjsd2wg.ap-southeast-2.rds.amazonaws.com:3306/";
-	   String userName = "tanvirdb1";
-	   String password = "tanvirdb1";
-	   String dbName = "tanvirdb1";
+	   String url = "jdbc:mysql://your_Amazon_RDS_with_port_number";
+	   String userName = "username";
+	   String password = "password";
+	   String dbName = "dbname";
 	   Class.forName("com.mysql.jdbc.Driver").newInstance();
 	   Connection connection = DriverManager.getConnection(url + dbName, userName, password);
 	   Statement statement = connection.createStatement();
 	   String command = "SELECT * FROM tanvirdb1.description";
        ResultSet resultSet =  statement.executeQuery(command);
        
-       String bucketPath = "https://s3-ap-southeast-2.amazonaws.com/tanvirahmedkhan/";
-  	   AWSCredentials credentials = new BasicAWSCredentials("AKIAI26XHZ7D27EOM5BQ",
-  							"6ydv0s5De4vAlWEVZNsurlUhq7wnfK7DXup0pR9m");
+       String bucketPath = "https://your_Amazon_S3_bucket_path;
+  	   AWSCredentials credentials = new BasicAWSCredentials("AKIAIxxxxxxxxxxxxxxxx",
+  							"6ydv0sxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
   	   AmazonS3Client s3 = new AmazonS3Client(credentials);
   	   ObjectListing photos = s3.listObjects("tanvirahmedkhan");
   	   
